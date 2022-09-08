@@ -12,14 +12,14 @@ export default function Navbar(props) {
             <div 
                 className="toggler" 
             >
-                <p className="toggler--light">Light</p>
+                <p className="toggler--light">Busy</p>
                 <div 
                     className="toggler--slider"
                     onClick={props.toggleDarkMode}
                 >
                     <div className="toggler--slider--circle"></div>
                 </div>
-                <p className="toggler--dark">Dark</p>
+                <p className="toggler--dark">Available</p>
             </div>
         </nav>
     )
