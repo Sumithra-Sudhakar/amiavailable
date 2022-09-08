@@ -1,7 +1,9 @@
 import logo from './logo.svg';
+import React from "react"
   import { useEffect, useState } from "react";
 import './App.css';
 import Navbar from "./Navbar"
+ 
 const users = [
   {
     username: 'admin1',
@@ -38,8 +40,13 @@ checkUser(users)
   }, [data.username, data.password])
 
   console.log(data)
+  const [darkMode, setDarkMode] = React.useState(true)
+  function toggleDarkMode(){
+      setDarkMode(prevMode => !prevMode)
+  }
   return (
     <div className="App">
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -69,7 +76,7 @@ checkUser(users)
           </div>
         <button type="submit" >Login</button>
       </header>
-       
+      
     </div>
   );
 }
